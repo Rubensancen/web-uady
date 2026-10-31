@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$dbname = 'Web'; // Nombre de tu base de datos
+$dbname = 'Web';
 $username = 'root';
-$password = ''; // En XAMPP la contraseña por defecto es vacía
+$password = '';
 
 try {
     $conexion = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
