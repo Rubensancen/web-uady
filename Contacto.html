@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons - Contacto y Formulario</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <h1 style="text-align: center;">Formulario de Contacto</h1>
+
+    <form action="Nombre" method="Post" onsubmit="return validarFormulario(event)" style="max-width: 600px; margin: 0 auto;">
+        <label for="Post-Name">Nombre:</label>
+        <input id="Post-Name" type="text" name="name">
+        <input type="Submit" value="Save"><br><br>
+
+        <fieldset>
+            <legend>Datos Personales</legend>
+            nombre: <input id="input_nombre" name="nombre" type="text"><br><br>
+            apellidos: <input id="input_apellidos" name="apellidos" type="text">
+        </fieldset>
+
+        <fieldset>
+            <legend>Coches o motos</legend>
+            <input type="radio" name="radio1" id="radio1" value="Coche"> Coche
+            <input type="radio" name="radio1" id="radio2" value="Moto"> Moto
+        </fieldset>
+
+        <fieldset>
+            <legend>Que lenguaje dominas</legend>
+            <input type="checkbox" name="deporte" value="C" /> C
+            <input type="checkbox" name="tv" value="Python" /> Python
+            <input type="checkbox" name="ejercicio" value="Java" /> Java
+        </fieldset>
+
+        <fieldset>
+            <legend>Genero Musical favorito</legend>
+            <select name="select" id="select_musica">
+                <option value="">--Selecciona--</option>
+                <option value="value1">Rock</option>
+                <option value="value2">Salsa</option>
+                <option value="value3">Regueton</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Que mascota tienes</legend>
+            <label>Mascota:
+                <input list="Mascota" name="Tumascota" id="input_mascota" />
+            </label>
+            <datalist id="Mascota">
+                <option value="Cobaya">
+                <option value="Tortuga">
+                <option value="Conejo">
+                <option value="Loro">
+                <option value="Gallina">
+                <option value="Pato">
+            </datalist>
+        </fieldset>
+
+        <fieldset>
+            <legend>Comentarios o Mensaje</legend>
+            <label for="comentarios">Mensaje:</label><br>
+            <textarea id="comentarios" name="comentarios" rows="3" cols="30" placeholder="Escribe tu mensaje..."></textarea>
+        </fieldset>
+
+        <br>
+        <input type="submit" value="Enviar Formulario">
+    </form>
+
+    <br><br>
+    <div style="text-align: center; margin-bottom: 30px;">
+        <a href="index.html" class="back-btn">&#8592; Volver al Index</a>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
