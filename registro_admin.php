@@ -9,11 +9,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario = trim($_POST['usuario']);
     $password = $_POST['password'];
 
-    // Encriptar contraseña
     $passwordHash = password_hash($password, PASSWORD_BCRYPT);
 
     try {
-        // Forzamos el rol como 'admin'
+       
         $sql = "INSERT INTO usuarios (nombre, usuario, password, rol) VALUES (?, ?, ?, 'admin')";
         $stmt = $conexion->prepare($sql);
         $stmt->execute([$nombre, $usuario, $passwordHash]);
